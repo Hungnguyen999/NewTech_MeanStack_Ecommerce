@@ -1,0 +1,71 @@
+s<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Books</title>
+        <style>
+            input{display: block; clear: both; margin: 10px;}
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    </head>
+    <body>
+            <div class="container">
+                <div class="col-sm-6 col-sm-offset-3">  
+                        <h1 class="text-center">Thêm</h1>
+                        <form action="" method="POST" enctype="multipart/form-data">
+                        <div class="form-group" >
+                                <label>Tên sách</label>
+                            <input type="text" name="txtName" class="form-control" id="validationDefault01" placeholder="Tên sách" required>
+                        </div>
+                        <div class="form-group">
+                        <label>Đường dẫn sách</label>
+                            <input type="file" name="BookImage" class="form-control" id="validationDefault02" placeholder="Đường dẫn sách" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Thêm hình</label>
+                            <input type="label" name="txtFile" placeholder="Add book image" />
+                        </div>
+                        <div class="form-group">
+                            <label>Thể loại sách</label>
+                            <a class="dropdown-item" >
+                            <select name="cateSelection">
+                                <% Cates.forEach(function(cate){ %>
+                                    <option value="<%- cate._id %>">
+                                        <%- cate.name %>
+                                    </option>
+                                <% }); %>
+                            </select>
+                            </a>
+                        </div>
+                        <div class="form-group col-sm-6 col-sm-offset-3">
+                                <label>Thêm hình</label>
+                                <button type="submit" name="btnAddbook" id="" class="btn btn-primary btn-lg btn-block" value="Add">Add</button>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        <!-- <form action="" method="POST" enctype="multipart/form-data">  Form submit thì nên có ectype -->
+            <!-- <input type="text" name="txtName" class="form-control" id="validationDefault01" placeholder="Tên sách" required>
+            <input type="file" name="BookImage" class="form-control" id="validationDefault02" placeholder="Đường dẫn sách" required>
+            <input type="label" name="txtFile" placeholder="Add book image" />
+            <button type="submit" name="btnAddbook" id="" class="btn btn-primary btn-lg btn-block" value="Add"></button>
+            
+            <a class="dropdown-item" >Thể loại sách:
+            <select name="cateSelection">
+                <% Cates.forEach(function(cate){ %>
+                    <option value="<%- cate._id %>">
+                        <%- cate.name %>
+                    </option>
+                <% }); %>
+            </select>
+            </a>
+        </div>
+        </form> -->
+
+    </body>
+</html>
